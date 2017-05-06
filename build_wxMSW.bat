@@ -1,13 +1,7 @@
-@echo on
+@echo off
 setlocal
 
-rem Visual Studio 2013 C++ build tools
-rem call "C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\vcvarsall.bat" x86_amd64
-
-set PATH=%PATH%;D:\work\git-2.8.1\bin
-
-set WXWIN=D:\work\wxWidgets
-set PGADMIN3=D:\work\pgadmin3
+call %~dp0environment.bat
 
 REM Cleanup
 pushd "%WXWIN%

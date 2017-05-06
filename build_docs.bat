@@ -1,14 +1,7 @@
-@echo on
+@echo off
 setlocal
 
-set WXWIN=D:\work\wxWidgets
-set PGADMIN3=D:\Work\pgadmin3
-
-set PYTHON=C:\Python27
-set PATH=%PYTHON%;%PYTHON%\Scripts;%WXWIN%\lib\vc_dll;%PATH%
-
-REM MS HTML Help Workshop
-set HHC=C:\Tools\HTML Help Workshop
+call %~dp0environment.bat
 
 REM Sphinx
 pip install sphinx

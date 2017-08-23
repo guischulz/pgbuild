@@ -4,7 +4,8 @@ setlocal
 call %~dp0environment.bat
 
 REM Sphinx
-pip install sphinx
+rem pip install sphinx
+python -m pip install --index-url=http://pypi.python.org/simple/ --trusted-host pypi.python.org sphinx
 
 REM Build
 pushd "%PGADMIN3%\docs"

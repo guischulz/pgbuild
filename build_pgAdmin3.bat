@@ -18,3 +18,5 @@ pushd "%PGADMIN3%"
 copy /y "%PGBUILD%\pgAdmin3_x64.sln" .
 msbuild pgAdmin3_x64.sln /p:Configuration="Release" /p:Platform=x64
 popd
+
+if exist "%PGADMIN3%\pgAdmin3_x64.sln" del "%PGADMIN3%\pgAdmin3_x64.sln"

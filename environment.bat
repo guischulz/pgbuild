@@ -6,7 +6,7 @@ set PGBUILD=%~dp0
 set GIT=D:\work\git-2.8.1
 set HHC=D:\Tools\HTML Help Workshop
 set PGADMIN3=D:\work\pgadmin3
-set PGDIR=D:\work\postgresql-9.6.4-1
+set PGDIR=D:\Work\postgresql-10.1-2
 set PYTHON=C:\Python27
 set WXWIN=D:\work\wxWidgets
 

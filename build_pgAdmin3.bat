@@ -14,9 +14,9 @@ call ver_svn.bat
 popd
 
 REM Build
+copy /y "%PGBUILD%\pgAdmin3_x64.sln" "%PGADMIN3%"
+copy /y "%PGBUILD%\pgAdmin3.vcxproj" "%PGADMIN3%\pgadmin"
+copy /y "%PGBUILD%\pgAdmin3.vcxproj.filters" "%PGADMIN3%\pgadmin"
 pushd "%PGADMIN3%"
-copy /y "%PGBUILD%\pgAdmin3_x64.sln" .
 msbuild pgAdmin3_x64.sln /p:Configuration="Release" /p:Platform=x64
 popd
-
-if exist "%PGADMIN3%\pgAdmin3_x64.sln" del "%PGADMIN3%\pgAdmin3_x64.sln"

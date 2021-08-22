@@ -14,6 +14,12 @@ if not exist "%~dp0target\pgAdmin III\i18n" md "%~dp0target\pgAdmin III\i18n"
 if not exist "%~dp0target\pgAdmin III\plugins.d" md "%~dp0target\pgAdmin III\plugins.d"
 
 copy /Y "%PGDIR%\bin\*.dll" "%~dp0target\bin"
+del /Q "%~dp0target\bin\wxmsw3*.dll"
+del /Q "%~dp0target\bin\wxbase3*.dll"
+copy /Y "%WXWIN%\lib\vc_dll\wx*.dll" "%~dp0target\bin"
+del /Q "%~dp0target\bin\wxmsw28u_media_*.dll"
+del /Q "%~dp0target\bin\wxmsw28u_qa_*.dll"
+del /Q "%~dp0target\bin\wxmsw28u_richtext_*.dll"
 copy /Y "%PGADMIN3%\pgadmin\Release\pgAdmin3.exe" "%~dp0target\bin"
 xcopy /E/S/V/I/Y "%PGADMIN3%\docs\en_US\_build\htmlhelp" "%~dp0target\pgAdmin III\docs\en_US"
 del "%~dp0target\pgAdmin III\docs\en_US\.buildinfo

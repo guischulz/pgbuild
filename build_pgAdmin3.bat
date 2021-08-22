@@ -14,6 +14,9 @@ call ver_svn.bat
 popd
 
 REM Build
+pusdh "%PGADMIN3%\pgadmin3\pgadmin\ui"
+call embed-xrc.bat
+popd
 pushd "%PGADMIN3%"
 msbuild pgAdmin3_x64.sln /p:Configuration="Release" /p:Platform=x64
 popd

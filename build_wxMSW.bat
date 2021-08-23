@@ -18,6 +18,7 @@ xcopy /v/y "%WXWIN%\_build_vs2017x64\lib\vc_x64_dll\*.exe" "%WXWIN%\lib\vc_dll"
 xcopy /v/y "%WXWIN%\_build_vs2017x64\lib\vc_x64_dll\*.exp" "%WXWIN%\lib\vc_dll"
 xcopy /v/y "%WXWIN%\_build_vs2017x64\lib\vc_x64_dll\*.lib" "%WXWIN%\lib\vc_dll"
 xcopy /e/s/v/i/y "%WXWIN%\_build_vs2017x64\lib\vc_x64_dll\mswu" "%WXWIN%\lib\vc_dll\mswu"
+xcopy /e/s/v/i/y "%WXWIN%\_build_vs2017x64\lib\vc_x64_dll\mswud" "%WXWIN%\lib\vc_dll\mswud"
 popd
 
 pushd "%WXWIN%\utils\hhp2cached"

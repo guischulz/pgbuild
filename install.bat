@@ -23,6 +23,7 @@ copy /Y "%WXWIN%\lib\vc_dll\wxmsw313u_html_vc_x64_custom.dll" "%~dp0target\bin"
 copy /Y "%WXWIN%\lib\vc_dll\wxmsw313u_stc_vc_x64_custom.dll" "%~dp0target\bin"
 copy /Y "%WXWIN%\lib\vc_dll\wxmsw313u_xrc_vc_x64_custom.dll" "%~dp0target\bin"
 copy /Y "%PGADMIN3%\pgadmin\Release\pgAdmin3.exe" "%~dp0target\bin"
+
 xcopy /E/S/V/I/Y "%PGADMIN3%\docs\en_US\_build\htmlhelp" "%~dp0target\pgAdmin III\docs\en_US"
 del "%~dp0target\pgAdmin III\docs\en_US\.buildinfo
 xcopy /E/S/V/I/Y "%PGADMIN3%\docs\en_US\hints" "%~dp0target\pgAdmin III\docs\en_US\hints"
@@ -30,6 +31,7 @@ for %%f in (ca_ES cs_CZ de_DE fr_FR ja_JP lv_LV pl_PL ru_RU sr_RS zh_CN) do (
   xcopy /E/S/V/I/Y "%PGADMIN3%\i18n\%%f" "%~dp0target\pgAdmin III\i18n\%%f"
   del "%~dp0target\pgAdmin III\i18n\%%f\*.po"
 )
+
 copy /Y "%PGADMIN3%\i18n\pg*.*" "%~dp0target\pgAdmin III\i18n"
 copy /Y "%PGADMIN3%\plugins.d\plugins.ini" "%~dp0target\pgAdmin III\plugins.d"
 copy /Y "%PGADMIN3%\pgadmin\settings.ini" "%~dp0target\pgAdmin III"
